@@ -61,7 +61,7 @@ const ProfilePage = () => {
           <FontAwesome5
             name="fire-alt"
             size={20}
-            color="#fff"
+            color="#000"
             style={styles.streakIcon}
           />
           <Text style={styles.streakText}>Day Streak</Text>
@@ -86,29 +86,32 @@ const styles = StyleSheet.create({
     fontSize: 24,
     textAlign: 'center',
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 20,
   },
-  imageIcon: {width: 100, height: 100, borderRadius: 50, marginBottom: 10},
+  imageIcon: {width: 150, height: 150, borderRadius: 80, borderWidth: 2, marginBottom: 20},
   name: {fontSize: 20, fontWeight: 'bold'},
-  email: {marginBottom: 20},
+  email: {marginBottom: 30},
   streak: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'red',
+    justifyContent: 'space-between',
+    width: '90%',
+    backgroundColor: '#FE4F32',
     padding: 10,
-    marginBottom: 20,
-    borderRadius: 20,
+    marginBottom: 50,
+    borderRadius: 10,
   },
-  streakIcon: {marginRight: 10},
-  streakText: {color: '#fff', marginRight: 10},
-  streakNb: {color: '#fff', fontWeight: 'bold', fontSize: 16},
+  streakIcon: {marginLeft: 10},
+  streakText: {color: '#000', marginRight: 100},
+  streakNb: {color: '#000', fontWeight: 'bold', fontSize: 16, marginRight: 10},
   listItem: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 15,
     borderRadius: 10,
-    marginBottom: 10,
+    marginBottom: 5,
     width: '90%',
+    backgroundColor: '#96D9FF'
   },
   listIcon: {marginRight: 10},
   listText: {flex: 1, color: '#000'},
