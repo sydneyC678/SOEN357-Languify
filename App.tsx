@@ -6,6 +6,7 @@ import PracticePage from './ui/PracticePage';
 import AITutorPage from './ui/AITutorPage';
 import CulturePage from './ui/CulturePage';
 import GamesPage from './ui/GamesPage';
+import ProfilePage from './ui/ProfilePage';
 
 export type RootStackParamList = {
   Home: undefined;
