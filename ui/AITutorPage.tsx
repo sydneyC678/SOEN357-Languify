@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import ToolBar from './ToolBar';
 
 const AITutorPage = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>AI tutor Page</Text>
+      <ToolBar />
     </View>
   );
 };
