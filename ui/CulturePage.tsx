@@ -6,8 +6,14 @@ import {View,
     TextInput,
     ScrollView,
     Image} from 'react-native';
+import ToolBar from './ToolBar';
 
-const CultureGridItem = ({title, image}) => {
+interface CultureGridItemProps {
+  title: string;
+  image: any; 
+}
+
+const CultureGridItem: React.FC<CultureGridItemProps> = ({title, image}) => {
   return (
     <TouchableOpacity style={styles.gridItem}>
       <Image source={image} style={styles.gridImage}/>
@@ -27,7 +33,7 @@ const CulturePage = () => {
         />
       </View>
 
-      <ScrollView style={styles.body}>
+      <ScrollView contentContainerStyle={styles.body}>
         <Text style={styles.title}>Explore the Culture</Text>
         <Text style={styles.subtitle}>
             Discover traditions, customs, and history while learning your new language!
@@ -45,6 +51,7 @@ const CulturePage = () => {
           <CultureGridItem title="Common Cultural Phrases" image={require('../assets/common.png')}/>
         </View>
       </ScrollView>
+      <ToolBar />
     </View>
 
 
@@ -64,6 +71,9 @@ const styles = StyleSheet.create({
   gridItem: {width: '45%', marginBottom: 10, borderRadius: 10, overflow: 'hidden'},
   gridImage: {width: '100%', height: 160, resizeMode: 'cover'},
   gridTitle: {padding: 10, color: 'white', backgroundColor: 'rgba(0,0,0,0.5)', textAlign: 'center', position: 'absolute', bottom: 0, left: 0, right: 0},
+  body: {
+    paddingBottom: 100, // Add padding at the bottom to ensure the content is scrollable and the toolbar doesn't block it
+  },
 });
 
 export default CulturePage;

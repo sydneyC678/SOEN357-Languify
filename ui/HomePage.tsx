@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TextInput,
 } from 'react-native';
+import ToolBar from './ToolBar';
 
 const HomePage = ({navigation}: any) => {
   return (
@@ -51,6 +52,7 @@ const HomePage = ({navigation}: any) => {
           </View>
         </View>
       </View>
+      <ToolBar />
     </View>
   );
 };
