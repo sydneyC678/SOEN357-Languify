@@ -7,8 +7,14 @@ import {
   TextInput,
 } from 'react-native';
 import ToolBar from './ToolBar';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../App';
 
-const HomePage = ({navigation}: any) => {
+type HomePageProps = StackScreenProps<RootStackParamList, 'Home'>;
+
+const HomePage: React.FC<HomePageProps> = ({ route, navigation }) => {
+  const { username } = route.params; // Access the passed username from the route params
+
   return (
     <View style={styles.container}>
       <TextInput
@@ -17,7 +23,7 @@ const HomePage = ({navigation}: any) => {
         placeholderTextColor="#aaa"
       />
       <Text style={styles.welcomeText}>Welcome back,</Text>
-      <Text style={styles.username}>Sarah!</Text>
+      <Text style={styles.username}>{username}!</Text>
 
       <TouchableOpacity
         style={[styles.button, styles.practiceButton]}
@@ -44,6 +50,7 @@ const HomePage = ({navigation}: any) => {
         onPress={() => navigation.navigate('Games & Challenges')}>
         <Text style={styles.buttonText}>Games & Challenges</Text>
       </TouchableOpacity>
+
       <View style={styles.progressContainer}>
         <Text style={styles.progressText}>Total practice time today</Text>
         <View style={styles.progressBar}>
