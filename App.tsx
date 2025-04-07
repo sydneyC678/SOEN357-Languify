@@ -14,6 +14,7 @@ export type RootStackParamList = {
   'My AI tutor': undefined;
   'Cultural Context & Immersion': undefined;
   'Games & Challenges': undefined;
+  'Profile Page': undefined
 };
 
 export type NavigationProp = StackNavigationProp<RootStackParamList>;
@@ -36,6 +37,7 @@ const App = () => {
           component={CulturePage}
         />
         <Stack.Screen name="Games & Challenges" component={GamesPage} />
+        <Stack.Screen name="Profile Page" component={ProfilePage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
