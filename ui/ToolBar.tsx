@@ -21,7 +21,9 @@ const ToolBar = () => {
         <FontAwesome5 name="trophy" size={24} color="#000" />
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity 
+        onPress={() => navigation.navigate('Profile Page')}
+        style={styles.button}>
         <FontAwesome5 name="user-circle" size={24} color="#000" solid />
       </TouchableOpacity>
 
