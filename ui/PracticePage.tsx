@@ -236,12 +236,12 @@ const styles = StyleSheet.create({
   skipButton: {
     marginTop: 20,
     borderWidth: 1,
-    borderColor: '#000', // change to black for visibility
+    borderColor: '#000',
     paddingVertical: 10,
     paddingHorizontal: 20,
     alignItems: 'center',
-    alignSelf: 'center', // center it
-    borderRadius: 10, // optional: make it look nice
+    alignSelf: 'center',
+    borderRadius: 10,
   },
 
   skipButtonText: {
