@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   answerOption: {
-    backgroundColor: 'dark orange',
+    backgroundColor: 'orange',
     padding: 6,
     marginVertical: 5,
     borderRadius: 20,
