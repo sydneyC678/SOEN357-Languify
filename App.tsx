@@ -7,6 +7,7 @@ import AITutorPage from './ui/AITutorPage';
 import CulturePage from './ui/CulturePage';
 import GamesPage from './ui/GamesPage';
 import ProfilePage from './ui/ProfilePage';
+import CommunityPage from './ui/CommunityPage';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -14,7 +15,8 @@ export type RootStackParamList = {
   'My AI tutor': undefined;
   'Cultural Context & Immersion': undefined;
   'Games & Challenges': undefined;
-  'Profile Page': undefined
+  'Profile Page': undefined;
+  'Community Page': undefined;
 };
 
 export type NavigationProp = StackNavigationProp<RootStackParamList>;
@@ -37,6 +39,7 @@ const App = () => {
           component={CulturePage}
         />
         <Stack.Screen name="Games & Challenges" component={GamesPage} />
+        <Stack.Screen name="Community Page" component={CommunityPage} />
         <Stack.Screen name="Profile Page" component={ProfilePage} />
       </Stack.Navigator>
     </NavigationContainer>

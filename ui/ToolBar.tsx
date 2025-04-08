@@ -26,10 +26,12 @@ const ToolBar = () => {
         style={styles.button}>
         <FontAwesome5 name="user-circle" size={24} color="#000" solid />
       </TouchableOpacity>
-
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome5 name="users" size={24} color="#000" />
+      <TouchableOpacity 
+        onPress={() => navigation.navigate('Community Page')}
+        style={styles.button}>
+        <FontAwesome5 name="users" size={24} color="#000" solid />
       </TouchableOpacity>
+      
 
       <TouchableOpacity style={styles.button}>
         <FontAwesome5 name="cog" size={24} color="#000" />
