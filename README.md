@@ -1,97 +1,26 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+**Languify – Language Learning Made Fun and Personalized**
 
-# Getting Started
+Welcome to Languify, the language learning app that makes mastering a new language fun, engaging, and tailored just for you. Whether you're planning a trip abroad, studying for exams, or just want to impress your friends with your bilingual skills, we've got you covered!
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+### What’s Inside Languify?
 
-## Step 1: Start Metro
+- **AI-Powered Tutoring**: Forget boring flashcards and static lessons. With Languify, you'll get real-time feedback from an AI tutor that feels just like a one-on-one session with a teacher. Improve your pronunciation, vocabulary, and grammar with personalized tips designed just for you.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- **Personalized Learning Path**: No more cookie-cutter lessons. Languify creates a learning path that adapts to your progress, strengths, and goals. Whether you're a beginner or looking to polish advanced skills, we've got a plan that's just right for you.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **Interactive Learning**: Get hands-on with learning! Enjoy flashcards, quizzes, simulated conversations, and role-playing games that make practicing a new language feel like playtime. Gamification features, like streaks and rewards, help keep you motivated.
 
-```sh
-# Using npm
-npm start
+- **Track Your Progress**: Watch your skills grow with detailed analytics that show your learning progress. See where you’re excelling and where you can improve, all at a glance.
 
-# OR using Yarn
-yarn start
-```
+### Why Languify?
 
-## Step 2: Build and run your app
+Learning a new language should never feel like a chore. That's why we’re dedicated to keeping you engaged with content that’s as dynamic and interactive as a real-life tutoring session. Our app is designed for a variety of learners, from travelers to students, to help you make language learning a part of your daily life.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
 
-### Android
+### Contributors:
+- **Rym Bensalem**, 40237684
+- **Mohamed Sanoko**, 40250945
+- **Sumer Abd Alla**, 40247712
+- **David Mateus**, 40247018
+- **Sydney Campbell**, 40243309
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
