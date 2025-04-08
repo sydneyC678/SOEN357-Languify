@@ -17,7 +17,7 @@ const PracticePageScroll = ({
       </TouchableOpacity>
 
       <View style={styles.container}>
-        {[0, 1, 2, 3].map((index) => (
+        {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (
           <View
             key={index}
             style={[

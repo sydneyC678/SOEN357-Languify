@@ -36,11 +36,8 @@ const PracticePage = () => {
   };
 
   const handleRight = () => {
-    if (pageIndex < 3) scrollToIndex(pageIndex + 1);
+    if (pageIndex < 7) scrollToIndex(pageIndex + 1);
   };
-
-
-
 
   return (
     <View style={styles.container}>
@@ -58,6 +55,135 @@ const PracticePage = () => {
         scrollEventThrottle={16}
         ref={scrollRef}
       >
+
+        {/* Today's Words */}
+        <View style={styles.page}>
+          <Text style={styles.sectionTitle}>Today’s words</Text>
+          <View style={styles.wordCard}>
+            <Text style={styles.word}>Cumpleaños</Text>
+            <Text style={styles.partOfSpeech}>noun</Text>
+            <Text style={styles.translation}><Text style={styles.italic}>Birthday</Text></Text>
+            <View style={styles.exampleBlock}>
+              <Text style={styles.example2}>Hoy es mi cumpleaños.</Text>
+              <Text style={styles.translationSmall}>Today is my birthday.</Text>
+            </View>
+            <View style={styles.exampleBlock}>
+              <Text style={styles.example}>Feliz cumpleaños, amigo.</Text>
+              <Text style={styles.translationSmall}>Happy birthday, friend.</Text>
+            </View>
+          </View>
+          <Text style={[styles.sectionTitle, { marginTop: 30 }]}>Categories</Text>
+          <View style={styles.categoryGrid}>
+            {['Work & Business', 'Health & Wellness', 'Daily Conversations', 'Family & Relationships', 'Shopping & Money', 'All Categories'].map((label) => (
+              <TouchableOpacity key={label} style={styles.categoryButton}>
+                <Text style={styles.categoryText}>{label}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        </View>
+
+        {/* Daily Conversations Page */}
+        <View style={styles.page}>
+          <Text style={styles.title}>Daily conversations</Text>
+          <View style={styles.exerciseGrid}>
+            <TouchableOpacity style={styles.exerciseCard}>
+              <Text style={styles.exerciseText}>Vocabulary Exercises</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.exerciseCard}>
+              <Text style={styles.exerciseText}>Grammar & Spelling</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.exerciseCard}>
+              <Text style={styles.exerciseText}>Listening Comprehension</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.exerciseCard}>
+              <Text style={styles.exerciseText}>Dialogues</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.exerciseCard}>
+              <Text style={styles.exerciseText}>Writing Exercises</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.exerciseCard}>
+              <Text style={styles.exerciseText}>Pronunciation</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* Vocabulary Exercises Page */}
+        <View style={styles.page}>
+          <Text style={styles.title}>Vocabulary exercises</Text>
+          <Text style={styles.instruction}>
+            Match the words with their correct translations.
+          </Text>
+          <View style={styles.matchingContainer}>
+            <View style={styles.matchingColumn}>
+              <TouchableOpacity style={styles.spanishCard}>
+                <Text style={styles.spanishText}>¿Cómo estás?</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.spanishCard}>
+                <Text style={styles.spanishText}>Me llamo Juan.</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.spanishCard}>
+                <Text style={styles.spanishText}>Buenos días.</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.spanishCard}>
+                <Text style={styles.spanishText}>¿Cómo te llamas?</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.spanishCard}>
+                <Text style={styles.spanishText}>Gracias, estoy bien.</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.matchingColumn}>
+              <TouchableOpacity style={styles.englishCard}>
+                <Text style={styles.englishText}>My name is Juan.</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.englishCard}>
+                <Text style={styles.englishText}>What's your name?</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.englishCard}>
+                <Text style={styles.englishText}>How are you?</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.englishCard}>
+                <Text style={styles.englishText}>Thank you, I'm good.</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.englishCard}>
+                <Text style={styles.englishText}>Good morning.</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+
+        {/* Grammar & Spelling Page */}
+        <View style={styles.page}>
+          <Text style={styles.title}>Grammar & Spelling</Text>
+          <Text style={styles.instruction}>
+            Choose the correct form of the verb to complete each sentence.
+          </Text>
+          <View style={styles.grammarContainer}>
+            <Text style={styles.sentenceLabel}>Sentence 1</Text>
+            <Text style={styles.sentenceText}>Yo _____ al cine todos los sábados.</Text>
+            <TouchableOpacity style={styles.verbOption}>
+              <Text style={styles.verbOptionText}>voy</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.verbOption}>
+              <Text style={styles.verbOptionText}>vas</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.verbOption}>
+              <Text style={styles.verbOptionText}>vamos</Text>
+            </TouchableOpacity>
+            
+            <Text style={[styles.sentenceLabel, {marginTop: 20}]}>Sentence 2</Text>
+            <Text style={styles.sentenceText}>Ellos _____ a la fiesta mañana.</Text>
+            <TouchableOpacity style={styles.verbOption}>
+              <Text style={styles.verbOptionText}>voy</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.verbOption}>
+              <Text style={styles.verbOptionText}>van</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.verbOption}>
+              <Text style={styles.verbOptionText}>vas</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
         {/* Listening Comprehension */}
         <View style={styles.page}>
           <Text style={styles.title}>Listening Comprehension</Text>
@@ -196,7 +322,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#000',
   },
-
   optionsTitle: {
     marginTop: 10,
     fontWeight: 'bold',
@@ -234,7 +359,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
   },
-
   micIcon: {
     color: '#fff',
     fontSize: 24,
@@ -249,13 +373,148 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: 10,
   },
-
   skipButtonText: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#000',
-  }
-
+  },
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: '600',
+    marginBottom: 10,
+  },
+  wordCard: {
+    backgroundColor: '#AEE2FF',
+    padding: 20,
+    borderRadius: 20,
+    elevation: 3,
+  },
+  word: {
+    fontSize: 32,
+    fontWeight: 'bold',
+  },
+  partOfSpeech: {
+    fontSize: 14,
+    marginBottom: 10,
+  },
+  translation: {
+    fontSize: 18,
+    fontStyle: 'italic',
+    marginBottom: 10,
+  },
+  translationSmall: {
+    fontSize: 14,
+    fontStyle: 'italic',
+    color: '#555',
+    marginBottom: 10,
+  },
+  exampleBlock: {
+    marginBottom: 10,
+  },
+  example2: {
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  italic: {
+    fontStyle: 'italic',
+  },
+  categoryGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+    marginTop: 10,
+  },
+  categoryButton: {
+    backgroundColor: '#000',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 15,
+    marginRight: 10,
+    marginBottom: 10,
+  },
+  categoryText: {
+    color: '#fff',
+    fontSize: 14,
+  },
+  exerciseGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  exerciseCard: {
+    backgroundColor: '#000',
+    width: '48%',
+    aspectRatio: 1,
+    borderRadius: 10,
+    marginBottom: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+  },
+  exerciseText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '500',
+    textAlign: 'center',
+  },
+  matchingContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
+  },
+  matchingColumn: {
+    width: '48%',
+  },
+  spanishCard: {
+    backgroundColor: '#E6CCFF', // Light purple
+    borderRadius: 15,
+    padding: 15,
+    marginBottom: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  englishCard: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 15,
+    padding: 15,
+    marginBottom: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  spanishText: {
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  englishText: {
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  grammarContainer: {
+    marginTop: 15,
+  },
+  sentenceLabel: {
+    fontSize: 14,
+    fontWeight: '500',
+    marginBottom: 5,
+  },
+  sentenceText: {
+    fontSize: 16,
+    marginBottom: 15,
+  },
+  verbOption: {
+    backgroundColor: '#FF6347', 
+    borderRadius: 25,
+    padding: 15,
+    marginBottom: 10,
+    alignItems: 'center',
+  },
+  verbOptionText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '500',
+  },
 });
 
 export default PracticePage;
