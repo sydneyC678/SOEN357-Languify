@@ -7,8 +7,14 @@ import {
   TextInput,
 } from 'react-native';
 import ToolBar from './ToolBar';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../App';
 
-const HomePage = ({navigation}: any) => {
+type HomePageProps = StackScreenProps<RootStackParamList, 'Home'>;
+
+const HomePage: React.FC<HomePageProps> = ({ route, navigation }) => {
+  const { username } = route.params;
+
   return (
     <View style={styles.container}>
       <TextInput
@@ -17,23 +23,23 @@ const HomePage = ({navigation}: any) => {
         placeholderTextColor="#aaa"
       />
       <Text style={styles.welcomeText}>Welcome back,</Text>
-      <Text style={styles.username}>Sarah!</Text>
+      <Text style={styles.username}>{username}!</Text>
 
       <TouchableOpacity
         style={[styles.button, styles.practiceButton]}
-        onPress={() => navigation.navigate('Practice')}>
+        onPress={() => navigation.navigate('Practice', {username})}>
         <Text style={styles.buttonText}>Practice</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={[styles.button, styles.tutorButton]}
-        onPress={() => navigation.navigate('My AI tutor')}>
+        onPress={() => navigation.navigate('My AI tutor', {username})}>
         <Text style={styles.buttonText}>My AI tutor</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={[styles.button, styles.cultureButton]}
-        onPress={() => navigation.navigate('Cultural Context & Immersion')}>
+        onPress={() => navigation.navigate('Cultural Context & Immersion', {username})}>
         <Text style={styles.cultureButtonText}>
           Cultural Context & Immersion
         </Text>
@@ -41,9 +47,10 @@ const HomePage = ({navigation}: any) => {
 
       <TouchableOpacity
         style={[styles.button, styles.gamesButton]}
-        onPress={() => navigation.navigate('Games & Challenges')}>
+        onPress={() => navigation.navigate('Games & Challenges', {username})}>
         <Text style={styles.buttonText}>Games & Challenges</Text>
       </TouchableOpacity>
+
       <View style={styles.progressContainer}>
         <Text style={styles.progressText}>Total practice time today</Text>
         <View style={styles.progressBar}>
@@ -52,7 +59,7 @@ const HomePage = ({navigation}: any) => {
           </View>
         </View>
       </View>
-      <ToolBar />
+      <ToolBar username={username}/>
     </View>
   );
 };

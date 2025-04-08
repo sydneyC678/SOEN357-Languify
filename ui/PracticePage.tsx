@@ -9,10 +9,16 @@ import {
   Dimensions,
 } from 'react-native';
 import PracticePageScroll from './PracticePageScroll';
+import { useRoute } from '@react-navigation/native';
+import type { RouteProp } from '@react-navigation/native';
+import { RootStackParamList } from '../App';
 
 const { width } = Dimensions.get('window');
 
 const PracticePage = () => {
+  const route = useRoute<RouteProp<RootStackParamList, 'Practice'>>();
+  const { username } = route.params;
+
   const scrollRef = useRef<ScrollView>(null);
   const [pageIndex, setPageIndex] = useState(0);
 
@@ -105,7 +111,7 @@ const PracticePage = () => {
           <Text style={styles.challenge}>Challenge</Text>
           <Text>Try to use at least five verbs and three adjectives to your paragraph.</Text>
           <TextInput
-            style={[styles.inputBox, styles.largeGrayInput]}
+            style={[styles.inputBox]}
             multiline
             numberOfLines={6}
             placeholder="Type here..."

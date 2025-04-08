@@ -8,6 +8,9 @@ import {
   TextInput,
 } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { useRoute } from '@react-navigation/native';
+import type { RouteProp } from '@react-navigation/native';
+import { RootStackParamList } from '../App';
 
 type ProfileListItemProps = {
   listIcon: string;
@@ -38,6 +41,9 @@ const ProfileListItem: React.FC<ProfileListItemProps> = ({
 };
 
 const ProfilePage = () => {
+  const route = useRoute<RouteProp<RootStackParamList, 'My AI tutor'>>();
+  const { username } = route.params;
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -54,8 +60,8 @@ const ProfilePage = () => {
           source={require('../assets/profile.jpg')}
           style={styles.imageIcon}
         />
-        <Text style={styles.name}>Sarah Johnson</Text>
-        <Text style={styles.email}>sarahj@gmail.com</Text>
+        <Text style={styles.name}>{username}</Text>
+        <Text style={styles.email}>your_email@gmail.com</Text>
 
         <View style={styles.streak}>
           <FontAwesome5

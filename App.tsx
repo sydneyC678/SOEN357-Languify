@@ -6,31 +6,46 @@ import PracticePage from './ui/PracticePage';
 import AITutorPage from './ui/AITutorPage';
 import CulturePage from './ui/CulturePage';
 import GamesPage from './ui/GamesPage';
+import LoginPage from './ui/LoginPage';
+import SignUpPage from './ui/SignUpPage';
 import ProfilePage from './ui/ProfilePage';
+import { NavigationProp as ReactNavigationProp } from '@react-navigation/native';
 import CommunityPage from './ui/CommunityPage';
 
 export type RootStackParamList = {
-  Home: undefined;
-  Practice: undefined;
-  'My AI tutor': undefined;
-  'Cultural Context & Immersion': undefined;
-  'Games & Challenges': undefined;
-  'Profile Page': undefined;
+  SignUp: undefined,
+  Login: undefined,
+  Home: { username: string };
+  Practice: { username: string };
+  'My AI tutor': {username: string};
+  'Cultural Context & Immersion': { username: string };
+  'Games & Challenges': { username: string };
+  'Profile Page': { username: string };
   'Community Page': undefined;
 };
 
-export type NavigationProp = StackNavigationProp<RootStackParamList>;
+export type NavigationProp = ReactNavigationProp<RootStackParamList>;
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="SignUp">
+        <Stack.Screen
+          name="SignUp"
+          component={SignUpPage}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Login"
+          component={LoginPage}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="Home"
           component={HomePage}
-          options={{headerShown: false}}
+          options={{ headerShown: false}}
         />
         <Stack.Screen name="Practice" component={PracticePage} />
         <Stack.Screen name="My AI tutor" component={AITutorPage} />

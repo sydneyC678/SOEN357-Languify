@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import ToolBar from './ToolBar';
+import { useRoute } from '@react-navigation/native';
+import type { RouteProp } from '@react-navigation/native';
+import { RootStackParamList } from '../App';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useGeminiChat } from '../backend/GeminiChat';
 
@@ -18,6 +21,9 @@ type Message = {
 };
 
 const AITutorPage = () => {
+  const route = useRoute<RouteProp<RootStackParamList, 'My AI tutor'>>();
+  const { username } = route.params;
+  
   const {
     messages,
     userInput,
@@ -117,7 +123,7 @@ const AITutorPage = () => {
             </TouchableOpacity>
           )}
 
-          <ToolBar />
+          <ToolBar username={username}/>
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
