@@ -7,13 +7,19 @@ import {View,
     ScrollView,
     Image} from 'react-native';
 import ToolBar from './ToolBar';
+import { useRoute } from '@react-navigation/native';
+import type { RouteProp } from '@react-navigation/native';
+import { RootStackParamList } from '../App';
+
 
 interface CultureGridItemProps {
   title: string;
   image: any; 
 }
 
+
 const CultureGridItem: React.FC<CultureGridItemProps> = ({title, image}) => {
+  
   return (
     <TouchableOpacity style={styles.gridItem}>
       <Image source={image} style={styles.gridImage}/>
@@ -23,6 +29,9 @@ const CultureGridItem: React.FC<CultureGridItemProps> = ({title, image}) => {
 };
 
 const CulturePage = () => {
+  const route = useRoute<RouteProp<RootStackParamList, 'Cultural Context & Immersion'>>();
+  const { username } = route.params;
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -51,7 +60,7 @@ const CulturePage = () => {
           <CultureGridItem title="Common Cultural Phrases" image={require('../assets/common.png')}/>
         </View>
       </ScrollView>
-      <ToolBar />
+      <ToolBar username={username}/>
     </View>
 
 

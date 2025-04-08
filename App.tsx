@@ -9,19 +9,22 @@ import GamesPage from './ui/GamesPage';
 import LoginPage from './ui/LoginPage';
 import SignUpPage from './ui/SignUpPage';
 import ProfilePage from './ui/ProfilePage';
+import { NavigationProp as ReactNavigationProp } from '@react-navigation/native';
 import CommunityPage from './ui/CommunityPage';
 
 export type RootStackParamList = {
   SignUp: undefined,
   Login: undefined,
-  Home: {username: string};
-  Practice: undefined;
-  'My AI tutor': undefined;
-  'Cultural Context & Immersion': undefined;
-  'Games & Challenges': undefined;
-  'Profile Page': undefined;
+  Home: { username: string };
+  Practice: { username: string };
+  'My AI tutor': {username: string};
+  'Cultural Context & Immersion': { username: string };
+  'Games & Challenges': { username: string };
+  'Profile Page': { username: string };
   'Community Page': undefined;
 };
+
+export type NavigationProp = ReactNavigationProp<RootStackParamList>;
 
 const Stack = createStackNavigator<RootStackParamList>();
 

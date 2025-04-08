@@ -13,7 +13,7 @@ import { RootStackParamList } from '../App';
 type HomePageProps = StackScreenProps<RootStackParamList, 'Home'>;
 
 const HomePage: React.FC<HomePageProps> = ({ route, navigation }) => {
-  const { username } = route.params; // Access the passed username from the route params
+  const { username } = route.params;
 
   return (
     <View style={styles.container}>
@@ -27,19 +27,19 @@ const HomePage: React.FC<HomePageProps> = ({ route, navigation }) => {
 
       <TouchableOpacity
         style={[styles.button, styles.practiceButton]}
-        onPress={() => navigation.navigate('Practice')}>
+        onPress={() => navigation.navigate('Practice', {username})}>
         <Text style={styles.buttonText}>Practice</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={[styles.button, styles.tutorButton]}
-        onPress={() => navigation.navigate('My AI tutor')}>
+        onPress={() => navigation.navigate('My AI tutor', {username})}>
         <Text style={styles.buttonText}>My AI tutor</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={[styles.button, styles.cultureButton]}
-        onPress={() => navigation.navigate('Cultural Context & Immersion')}>
+        onPress={() => navigation.navigate('Cultural Context & Immersion', {username})}>
         <Text style={styles.cultureButtonText}>
           Cultural Context & Immersion
         </Text>
@@ -47,7 +47,7 @@ const HomePage: React.FC<HomePageProps> = ({ route, navigation }) => {
 
       <TouchableOpacity
         style={[styles.button, styles.gamesButton]}
-        onPress={() => navigation.navigate('Games & Challenges')}>
+        onPress={() => navigation.navigate('Games & Challenges', {username})}>
         <Text style={styles.buttonText}>Games & Challenges</Text>
       </TouchableOpacity>
 
@@ -59,7 +59,7 @@ const HomePage: React.FC<HomePageProps> = ({ route, navigation }) => {
           </View>
         </View>
       </View>
-      <ToolBar />
+      <ToolBar username={username}/>
     </View>
   );
 };

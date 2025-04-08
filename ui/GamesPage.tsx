@@ -1,12 +1,18 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import ToolBar from './ToolBar';
+import { useRoute } from '@react-navigation/native';
+import type { RouteProp } from '@react-navigation/native';
+import { RootStackParamList } from '../App';
 
 const GamesPage = () => {
+  const route = useRoute<RouteProp<RootStackParamList, 'Games & Challenges'>>();
+  const { username } = route.params;
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Games Page</Text>
-      <ToolBar />
+      <ToolBar username={username}/>
     </View>
   );
 };
