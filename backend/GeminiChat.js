@@ -20,7 +20,7 @@ export const useGeminiChat = () => {
 
   useEffect(() => {
     const initialMessage = { 
-      text: "Welcome to Language Tutor! Please select one of the options below to get started.", 
+      text: "Hey There, Welcome to Language Tutor! Please select one of the options below to get started.", 
       user: false 
     };
     setMessages([initialMessage]);

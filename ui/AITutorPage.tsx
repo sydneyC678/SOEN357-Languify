@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1f1f1',
     borderRadius: 30,
     padding: 10,
-    marginBottom: 20, // Adjusted marginBottom here to avoid overlapping with the keyboard
+    marginBottom: 20, 
   },
   chatInput: {
     flex: 1,
