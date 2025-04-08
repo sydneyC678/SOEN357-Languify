@@ -14,7 +14,7 @@ Welcome to Languify, the language learning app that makes mastering a new langua
 
 ### Why Languify?
 
-Learning a new language should never feel like a chore. That's why we’re dedicated to keeping you engaged with content that’s as dynamic and interactive as a real-life tutoring session. Our app is designed for a variety of learners, from travelers to students, to help you make language learning a part of your daily life—on your terms.
+Learning a new language should never feel like a chore. That's why we’re dedicated to keeping you engaged with content that’s as dynamic and interactive as a real-life tutoring session. Our app is designed for a variety of learners, from travelers to students, to help you make language learning a part of your daily life.
 
 
 ### Contributors:
