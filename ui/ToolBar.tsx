@@ -37,7 +37,9 @@ const ToolBar: React.FC<ToolBarProps> = ({ username }) => {
       </TouchableOpacity>
       
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Settings', {username})}
+        style={styles.button}>
         <FontAwesome5 name="cog" size={24} color="#000" />
       </TouchableOpacity>
     </View>
