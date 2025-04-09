@@ -11,6 +11,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { useRoute } from '@react-navigation/native';
 import type { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from '../App';
+import ToolBar from './ToolBar';
 
 type ProfileListItemProps = {
   listIcon: string;
@@ -79,6 +80,7 @@ const ProfilePage = () => {
         <ProfileListItem listIcon="signal" listText="Progress & Stats" />
         <ProfileListItem listIcon="medal" listText="Achievements & Badges" />
       </View>
+      <ToolBar username={username} />
     </View>
   );
 };

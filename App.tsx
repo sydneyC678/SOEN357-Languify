@@ -11,6 +11,7 @@ import SignUpPage from './ui/SignUpPage';
 import ProfilePage from './ui/ProfilePage';
 import { NavigationProp as ReactNavigationProp } from '@react-navigation/native';
 import CommunityPage from './ui/CommunityPage';
+import Settings from './ui/Settings';
 
 export type RootStackParamList = {
   SignUp: undefined,
@@ -22,6 +23,7 @@ export type RootStackParamList = {
   'Games & Challenges': { username: string };
   'Profile Page': { username: string };
   'Community Page': undefined;
+  'Settings': { username: string };
 };
 
 export type NavigationProp = ReactNavigationProp<RootStackParamList>;
@@ -56,6 +58,7 @@ const App = () => {
         <Stack.Screen name="Games & Challenges" component={GamesPage} />
         <Stack.Screen name="Community Page" component={CommunityPage} />
         <Stack.Screen name="Profile Page" component={ProfilePage} />
+        <Stack.Screen name="Settings" component={Settings} />
       </Stack.Navigator>
     </NavigationContainer>
   );
