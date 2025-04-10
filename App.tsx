@@ -22,7 +22,7 @@ export type RootStackParamList = {
   'Cultural Context & Immersion': { username: string };
   'Games & Challenges': { username: string };
   'Profile Page': { username: string };
-  'Community Page': undefined;
+  'Community Page': { username: string };
   'Settings': { username: string };
 };
 

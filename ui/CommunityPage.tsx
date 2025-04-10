@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, ImageSourcePropType, TextInput } from 'react-native';
 import ToolBar from './ToolBar';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { useRoute } from '@react-navigation/native';
+import type { RouteProp } from '@react-navigation/native';
+import { RootStackParamList } from '../App';
+
 
 interface FriendItem {
   id: string;
@@ -33,6 +37,9 @@ const CommunityPage = () => {
     { id: '4', name: 'Emma Thorn', avatar: require('../assets/emma.png'), streak: 190, rank: 4 },
     { id: '5', name: 'Lucas Martin', avatar: require('../assets/lucas.png'), streak: 174, rank: 5 },
   ];
+
+  const route = useRoute<RouteProp<RootStackParamList, 'Community Page'>>();
+  const { username } = route.params;
 
   return (
     <View style={styles.container}>
@@ -97,7 +104,7 @@ const CommunityPage = () => {
         </View>
       </ScrollView>
       
-      <ToolBar />
+      <ToolBar username={username}/>
     </View>
   );
 };

@@ -31,7 +31,7 @@ const ToolBar: React.FC<ToolBarProps> = ({ username }) => {
         <FontAwesome5 name="user-circle" size={24} color="#000" solid />
       </TouchableOpacity>
       <TouchableOpacity 
-        onPress={() => navigation.navigate('Community Page')}
+        onPress={() => navigation.navigate('Community Page', {username})}
         style={styles.button}>
         <FontAwesome5 name="users" size={24} color="#000" solid />
       </TouchableOpacity>
