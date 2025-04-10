@@ -24,3 +24,8 @@ Learning a new language should never feel like a chore. That's why we’re dedic
 - **David Mateus**, 40247018
 - **Sydney Campbell**, 40243309
 
+Demo:
+
+https://github.com/user-attachments/assets/df81d244-54cf-4261-ab91-cccb01d63b30
+
+
