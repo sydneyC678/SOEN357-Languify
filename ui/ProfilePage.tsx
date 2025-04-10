@@ -62,7 +62,7 @@ const ProfilePage = () => {
           style={styles.imageIcon}
         />
         <Text style={styles.name}>{username}</Text>
-        <Text style={styles.email}>your_email@gmail.com</Text>
+        <Text style={styles.email}>msanoko5@gmail.com</Text>
 
         <View style={styles.streak}>
           <FontAwesome5
