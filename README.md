@@ -28,4 +28,9 @@ Demo:
 
 https://github.com/user-attachments/assets/df81d244-54cf-4261-ab91-cccb01d63b30
 
+AI Tutpr with Speech Feature:
+
+https://github.com/user-attachments/assets/7869fec0-35c9-4484-b78a-180e63db379d
+
+
 
